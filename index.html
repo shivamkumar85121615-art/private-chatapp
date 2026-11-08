@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Private Chat & Video Call</title>
+    <style>
+        body { font-family: Arial, sans-serif; background: #0f172a; color: #fff; margin: 0; padding: 20px; display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100vh; }
+        .card { background: #1e293b; padding: 20px; border-radius: 10px; width: 100%; max-width: 400px; box-shadow: 0 4px 6px rgba(0,0,0,0.3); text-align: center; }
+        input { width: 90%; padding: 10px; margin: 10px 0; border: none; border-radius: 5px; background: #334155; color: #fff; }
+        button { background: #2563eb; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer; width: 100%; font-size: 16px; }
+        button:hover { background: #1d4ed8; }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <h2>🔒 Private Secure App</h2>
+        <p>चैट और वीडियो कॉल के लिए अपना रूम आईडी दर्ज करें</p>
+        <input type="text" id="roomId" placeholder="रूम का नाम या कोड लिखें...">
+        <button onclick="startChat()">चैट शुरू करें</button>
+    </div>
+
+    <script>
+        function startChat() {
+            const room = document.getElementById('roomId').value;
+            if(room) {
+                alert('रूम कनेक्ट हो रहा है: ' + room);
+            } else {
+                alert('कृपया पहले कोई रूम आईडी लिखें!');
+            }
+        }
+    </script>
+</body>
+</html>
